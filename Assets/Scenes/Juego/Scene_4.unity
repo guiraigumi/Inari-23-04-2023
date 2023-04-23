@@ -4443,8 +4443,8 @@ GameObject:
   - component: {fileID: 371697215}
   - component: {fileID: 371697214}
   m_Layer: 0
-  m_Name: BGMManager
-  m_TagString: Untagged
+  m_Name: MusicManager
+  m_TagString: GameMusic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7433,7 +7433,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []

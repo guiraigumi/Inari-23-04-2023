@@ -4,31 +4,50 @@ using UnityEngine;
 
 public class BGMManager : MonoBehaviour
 {
-    //variable para acceder al AudioSource
     public static BGMManager Instance;
 
     private AudioSource _audioSource;
 
+    private bool _isPlaying = false;
 
     void Awake()
     {
-        //Asignamos la variable
-        _audioSource = GetComponent <AudioSource>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Reproducimos la BGM
-        _audioSource.Play();
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+
+        DontDestroyOnLoad(this.gameObject);
+
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.playOnAwake = false; // Disable PlayOnAwake
     }
 
-    public void StartBGM()
+
+    void Start()
     {
-        _audioSource.Play();
+        if (!_isPlaying)
+        {
+            PlayBGM();
+        }
     }
-    //Funcion para parar la BGM
+
+    public void PlayBGM()
+    {
+        if (_isPlaying) return;
+
+        _audioSource.Play();
+        _isPlaying = true;
+    }
+
     public void StopBGM()
     {
         _audioSource.Stop();
+        _isPlaying = false;
     }
 }
+
+

@@ -23,6 +23,7 @@ TagManager:
   - Torch4
   - Torch2
   - Torch1
+  - GameMusic
   layers:
   - Default
   - TransparentFX
