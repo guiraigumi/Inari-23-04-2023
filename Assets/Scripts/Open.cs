@@ -87,6 +87,16 @@ public class Open : MonoBehaviour
         {
             doorMark.SetActive(true);
         }
+
+        if (other.CompareTag("Hangin"))
+        {
+            doorMark.SetActive(true);
+        }
+
+        if (other.CompareTag("Kalju"))
+        {
+            doorMark.SetActive(true);
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -105,6 +115,32 @@ public class Open : MonoBehaviour
         }
 
         if (other.CompareTag("Ruhe") && Input.GetButtonDown("Submit"))
+        {
+            if (!isOpened)
+            {
+                anim.SetBool("Open", true);
+                sfxManager.DoorSound();
+                isOpened = true;
+                doorMark.SetActive(false);
+                doorMinimapIcon.SetActive(false);
+            }
+        
+        }
+
+        if (other.CompareTag("Hangin") && Input.GetButtonDown("Submit"))
+        {
+            if (!isOpened)
+            {
+                anim.SetBool("Open", true);
+                sfxManager.DoorSound();
+                isOpened = true;
+                doorMark.SetActive(false);
+                doorMinimapIcon.SetActive(false);
+            }
+
+        }
+
+        if (other.CompareTag("Kalju") && Input.GetButtonDown("Submit"))
         {
             if (!isOpened)
             {
@@ -141,6 +177,30 @@ public class Open : MonoBehaviour
             }
         }
 
+        if (other.CompareTag("Hangin") && Input.GetKeyDown(KeyCode.JoystickButton1))
+        {
+            if (!isOpened)
+            {
+                anim.SetBool("Open", true);
+                sfxManager.DoorSound();
+                isOpened = true;
+                doorMark.SetActive(false);
+                doorMinimapIcon.SetActive(false);
+            }
+        }
+
+        if (other.CompareTag("Kalju") && Input.GetKeyDown(KeyCode.JoystickButton1))
+        {
+            if (!isOpened)
+            {
+                anim.SetBool("Open", true);
+                sfxManager.DoorSound();
+                isOpened = true;
+                doorMark.SetActive(false);
+                doorMinimapIcon.SetActive(false);
+            }
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -150,7 +210,17 @@ public class Open : MonoBehaviour
             doorMark.SetActive(false);
         }
 
-         if (other.CompareTag("Ruhe"))
+        if (other.CompareTag("Ruhe"))
+        {
+            doorMark.SetActive(false);
+        }
+
+        if (other.CompareTag("Hangin"))
+        {
+            doorMark.SetActive(false);
+        }
+
+        if (other.CompareTag("Kalju"))
         {
             doorMark.SetActive(false);
         }

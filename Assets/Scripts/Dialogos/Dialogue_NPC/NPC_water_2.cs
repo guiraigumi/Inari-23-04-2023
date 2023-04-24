@@ -52,27 +52,6 @@ public class NPC_water_2 : MonoBehaviour
             }
             
         }
-
-
-         if(isPlayerInRange && Input.GetKeyDown(KeyCode.JoystickButton1))
-        {
-            if(!didDialogueStart)
-            {
-                StartDialogue();
-            }
-            else if(dialogueText.text == dialogueLines[lineIndex])
-            {
-                NextDialogueLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-
-                dialogueText.text = dialogueLines[lineIndex];
-            }
-            
-        }
-
     }
 
     private void StartDialogue()

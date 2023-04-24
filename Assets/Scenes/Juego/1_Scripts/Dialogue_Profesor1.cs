@@ -13,7 +13,6 @@ public class Dialogue_Profesor1 : MonoBehaviour
     private int lineIndex;
     GameObject target;
     GameObject npc;
-    private Quaternion originalYRotation;
     public GameObject cinematica;
     private float timeElapsed = 0f;
 
@@ -67,24 +66,6 @@ public class Dialogue_Profesor1 : MonoBehaviour
                 dialogueText.text = dialogueLines[lineIndex];
             }
         }
-
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.JoystickButton1))
-        {
-            if (!didDialogueStart)
-            {
-                StartDialogue();
-            }
-            else if (dialogueText.text == dialogueLines[lineIndex])
-            {
-                StopAllCoroutines();
-                StartCoroutine(NextDialogueLineWithDelay()); // Call the modified method
-            }
-            else
-            {
-                StopAllCoroutines();
-                dialogueText.text = dialogueLines[lineIndex];
-            }
-        }
     }
 
 
@@ -95,15 +76,7 @@ public class Dialogue_Profesor1 : MonoBehaviour
         backgroundImage.SetActive(true);
         RawImage.SetActive(true);
         lineIndex = 0;
-
         StartCoroutine(ShowLine());
-        target = GameObject.Find("Front");
-        npc = GameObject.Find("Profesor");
-        originalYRotation = npc.transform.rotation;
-        Debug.Log("Rotation NPC: " + originalYRotation);
-        Vector3 targetPosition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
-
-        npc.transform.LookAt(targetPosition);
         player.isplayerTalking = true;
     }
 
@@ -136,8 +109,6 @@ public class Dialogue_Profesor1 : MonoBehaviour
             anim.SetBool("isTalking", false);
             anim2.SetBool("isTalking", false);
             npc = GameObject.Find("Profesor");
-
-            npc.transform.SetPositionAndRotation(new Vector3(npc.transform.position.x, npc.transform.position.y, npc.transform.position.z), originalYRotation);
             player.isplayerTalking = false;
         }
 
@@ -229,9 +200,6 @@ public class Dialogue_Profesor1 : MonoBehaviour
                 RawImage.SetActive(false);
                 anim.SetBool("isTalking", false);
                 anim2.SetBool("isTalking", false);
-                npc = GameObject.Find("Profesor");
-
-                npc.transform.SetPositionAndRotation(new Vector3(npc.transform.position.x, npc.transform.position.y, npc.transform.position.z), originalYRotation);
                 player.isplayerTalking = false;
                 didDialogueStart = false;
             }

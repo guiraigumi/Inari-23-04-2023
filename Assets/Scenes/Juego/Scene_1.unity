@@ -5291,6 +5291,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTalking: 0
+  player: {fileID: 0}
+  player2: {fileID: 0}
+  player3: {fileID: 0}
+  player4: {fileID: 0}
   dialoguePanel: {fileID: 1037770768}
   dialogueMark: {fileID: 1805377517}
   dialogueText: {fileID: 1826921825}

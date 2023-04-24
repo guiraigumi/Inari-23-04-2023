@@ -99,46 +99,6 @@ public class Cofre : MonoBehaviour
             isOpened = true;
             audio.PlayOneShot(openChest);
         }
-
-        if (!isOpened && collider.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.JoystickButton1))
-        {
-            anim.SetBool("isOpen", true);
-            chestIcon.SetActive(false);
-            /*int avrosAmount = Random.Range(minAvros, maxAvros + 1);
-            avrosManager.AddAvrosFromChest(avrosAmount);*/
-            isOpened = true;
-            audio.PlayOneShot(openChest);
-        }
-
-        if (!isOpened && collider.gameObject.CompareTag("Ruhe") && Input.GetKeyDown(KeyCode.JoystickButton1))
-        {
-            anim.SetBool("isOpen", true);
-            chestIcon2.SetActive(false);
-            /*int avrosAmount = Random.Range(minAvros, maxAvros + 1);
-            avrosManager.AddAvrosFromChest(avrosAmount);*/
-            isOpened = true;
-            audio.PlayOneShot(openChest);
-        }
-
-        if (!isOpened && collider.gameObject.CompareTag("Hangin") && Input.GetKeyDown(KeyCode.JoystickButton1))
-        {
-            anim.SetBool("isOpen", true);
-            chestIcon3.SetActive(false);
-            /*int avrosAmount = Random.Range(minAvros, maxAvros + 1);
-            avrosManager.AddAvrosFromChest(avrosAmount);*/
-            isOpened = true;
-            audio.PlayOneShot(openChest);
-        }
-
-        if (!isOpened && collider.gameObject.CompareTag("Kalju") && Input.GetKeyDown(KeyCode.JoystickButton1))
-        {
-            anim.SetBool("isOpen", true);
-            chestIcon4.SetActive(false);
-            /*int avrosAmount = Random.Range(minAvros, maxAvros + 1);
-            avrosManager.AddAvrosFromChest(avrosAmount);*/
-            isOpened = true;
-            audio.PlayOneShot(openChest);
-        }
     }
 
     void OnTriggerExit(Collider collider)

@@ -6,18 +6,20 @@ using System;
 
 public class Dialogue : MonoBehaviour
 {
-
-    public static Dialogue Instance;
     private bool isPlayerInRange;
     private bool didDialogueStart;
     public bool isTalking;
     private int lineIndex;
     GameObject target;
     GameObject npc;
+
     private Quaternion originalYRotation;
 
     Animator anim;
-    Player player; 
+    public Player player;
+    public Player player2;
+    public Player player3;
+    public Player player4;
 
     private float typingTime = 0.05f;
 
@@ -28,20 +30,19 @@ public class Dialogue : MonoBehaviour
 
     void Awake()
     {
-        anim = GetComponentInChildren<Animator>();
-        player = GameObject.Find("Player").GetComponent<Player>();
+        anim = GetComponentInChildren<Animator>();                                                                                        
     }
 
 
     void Update()
     {
-        if(isPlayerInRange && Input.GetButtonDown("Submit"))
+        if (isPlayerInRange && Input.GetButtonDown("Submit"))
         {
-            if(!didDialogueStart)
+            if (!didDialogueStart)
             {
                 StartDialogue();
             }
-            else if(dialogueText.text == dialogueLines[lineIndex])
+            else if (dialogueText.text == dialogueLines[lineIndex])
             {
                 NextDialogueLine();
             }
@@ -51,28 +52,9 @@ public class Dialogue : MonoBehaviour
 
                 dialogueText.text = dialogueLines[lineIndex];
             }
-            
+
         }
 
-        if(isPlayerInRange && Input.GetKeyDown(KeyCode.JoystickButton1))
-        {
-            if(!didDialogueStart)
-            {
-                StartDialogue();
-            }
-            else if(dialogueText.text == dialogueLines[lineIndex])
-            {
-                NextDialogueLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-
-                dialogueText.text = dialogueLines[lineIndex];
-            }
-            
-        }
-        
     }
 
     private void StartDialogue()
@@ -81,22 +63,29 @@ public class Dialogue : MonoBehaviour
         dialoguePanel.SetActive(true);
         lineIndex = 0;
         anim.SetBool("isTalking", true);
-        
+        player.enabled = false;
+        player2.enabled = false;
+        player3.enabled = false;
+        player4.enabled = false;
+
         StartCoroutine(ShowLine());
         target = GameObject.Find("Front");
-        npc = GameObject.Find("NPC");
         originalYRotation = npc.transform.rotation;
         Debug.Log("Rotation NPC: " + originalYRotation);
         Vector3 targetPosition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
+        dialogueMark.SetActive(false);
 
         npc.transform.LookAt(targetPosition);
         player.isplayerTalking = true;
+        player2.isplayerTalking = true;
+        player3.isplayerTalking = true;
+        player4.isplayerTalking = true;
     }
 
     private void NextDialogueLine()
     {
         lineIndex++;
-        if(lineIndex < dialogueLines.Length)
+        if (lineIndex < dialogueLines.Length)
         {
             StartCoroutine(ShowLine());
         }
@@ -104,11 +93,17 @@ public class Dialogue : MonoBehaviour
         {
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
+            player.enabled = true;
+            player2.enabled = true;
+            player3.enabled = true;
+            player4.enabled = true;
             anim.SetBool("isTalking", false);
-            npc = GameObject.Find("NPC");
 
             npc.transform.SetPositionAndRotation(new Vector3(npc.transform.position.x, npc.transform.position.y, npc.transform.position.z), originalYRotation);
             player.isplayerTalking = false;
+            player2.isplayerTalking = false;
+            player3.isplayerTalking = false;
+            player4.isplayerTalking = false;
             //Time.timeScale = 1f;
         }
     }
@@ -117,7 +112,7 @@ public class Dialogue : MonoBehaviour
     {
         dialogueText.text = string.Empty;
 
-        foreach(char ch in dialogueLines[lineIndex])
+        foreach (char ch in dialogueLines[lineIndex])
         {
             dialogueText.text += ch;
 
@@ -125,9 +120,9 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collision )
+    private void OnTriggerEnter(Collider collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ruhe") || collision.gameObject.CompareTag("Hangin") || collision.gameObject.CompareTag("Kalju"))
         {
             isPlayerInRange = true;
             dialogueMark.SetActive(true);
@@ -137,7 +132,7 @@ public class Dialogue : MonoBehaviour
 
     private void OnTriggerExit(Collider collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ruhe") || collision.gameObject.CompareTag("Hangin") || collision.gameObject.CompareTag("Kalju"))
         {
             isPlayerInRange = false;
             dialogueMark.SetActive(false);
@@ -146,4 +141,7 @@ public class Dialogue : MonoBehaviour
     }
 
 }
+
+
+
 

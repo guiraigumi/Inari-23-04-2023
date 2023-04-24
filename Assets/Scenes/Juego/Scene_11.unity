@@ -609,29 +609,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 281889151}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &63025043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63025042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0475f904375ccc54884397d0b23693ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTalking: 0
-  npc: {fileID: 63025042}
-  player: {fileID: 0}
-  player2: {fileID: 0}
-  dialoguePanel: {fileID: 2041263650}
-  dialogueMark: {fileID: 1548927102}
-  dialogueText: {fileID: 765553464}
-  dialogueLines:
-  - The lookout is very close to the outskirts of the academy, but the spirits are
-    restless today...
-  - Even if something happens, spirits do not usually interfere in human affairs.
 --- !u!195 &63025044
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -729,6 +706,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 281889151}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &63025050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63025042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d5082e6c73e8545af997226a6b0eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  npc: {fileID: 63025042}
+  player: {fileID: 1696603161}
+  player2: {fileID: 2922634094790385536}
+  dialoguePanel: {fileID: 2041263650}
+  dialogueMark: {fileID: 1548927102}
+  dialogueText: {fileID: 765553464}
+  dialogueLines:
+  - The lookout is very close to the outskirts of the academy, but the spirits are
+    restless today...
+  - 'Even if something happens, spirits do not usually interfere in human affairs.
+
+'
 --- !u!1 &67984773
 GameObject:
   m_ObjectHideFlags: 0
@@ -6221,6 +6223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lua: {fileID: 1696603156}
   ruhe: {fileID: 2922634094790385535}
+  librarian: {fileID: 0}
+  nurse: {fileID: 0}
+  professor: {fileID: 0}
   radialMenu: {fileID: 556426511}
 --- !u!1 &488936293 stripped
 GameObject:
@@ -20502,29 +20507,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1274567982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274567980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0475f904375ccc54884397d0b23693ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTalking: 0
-  npc: {fileID: 1274567980}
-  player: {fileID: 0}
-  player2: {fileID: 0}
-  dialoguePanel: {fileID: 2041263650}
-  dialogueMark: {fileID: 886249710}
-  dialogueText: {fileID: 765553464}
-  dialogueLines:
-  - I'm not sure if we're doing the right thing by celebrating a day when, due to
-    human actions
-  - the kindest spirit of all split apart and created a darker version of itself...
 --- !u!136 &1274567983
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21048,6 +21030,7 @@ MonoBehaviour:
   waterupSFX: {fileID: 0}
   jumpSFX: {fileID: 0}
   fireSFX: {fileID: 0}
+  fallingSFX: {fileID: 0}
 --- !u!1001 &1320476708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33744,6 +33727,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1274567979}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1980361196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274567980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d5082e6c73e8545af997226a6b0eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  npc: {fileID: 1274567980}
+  player: {fileID: 1696603161}
+  player2: {fileID: 2922634094790385536}
+  dialoguePanel: {fileID: 2041263650}
+  dialogueMark: {fileID: 886249710}
+  dialogueText: {fileID: 765553464}
+  dialogueLines:
+  - I'm not sure if we're doing the right thing by celebrating a day when, due to
+    human actions
+  - 'the kindest spirit of all split apart and created a darker version of itself...
+
+'
 --- !u!1 &2003310707
 GameObject:
   m_ObjectHideFlags: 0
@@ -35304,7 +35312,7 @@ GameObject:
   - component: {fileID: 2144614250}
   - component: {fileID: 2144614249}
   - component: {fileID: 2144614248}
-  - component: {fileID: 2144614247}
+  - component: {fileID: 2144614252}
   m_Layer: 0
   m_Name: NPC_water_1
   m_TagString: Untagged
@@ -35312,29 +35320,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2144614247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144614246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0475f904375ccc54884397d0b23693ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTalking: 0
-  npc: {fileID: 2144614246}
-  player: {fileID: 0}
-  player2: {fileID: 0}
-  dialoguePanel: {fileID: 2041263650}
-  dialogueMark: {fileID: 1722245415}
-  dialogueText: {fileID: 765553464}
-  dialogueLines:
-  - The lookout point is very close to the outskirts of the academy, but even so,
-    I don't trust the spirits.
-  - Should I go or not... I'm very undecided!
 --- !u!95 &2144614248
 Animator:
   serializedVersion: 4
@@ -35407,6 +35392,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: -32.56, z: 0}
+--- !u!114 &2144614252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144614246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d5082e6c73e8545af997226a6b0eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  npc: {fileID: 2144614246}
+  player: {fileID: 1696603161}
+  player2: {fileID: 2922634094790385536}
+  dialoguePanel: {fileID: 2041263650}
+  dialogueMark: {fileID: 1722245415}
+  dialogueText: {fileID: 765553464}
+  dialogueLines:
+  - The lookout point is very close to the outskirts of the academy, but even so,
+    I don't trust the spirits.
+  - Should I go or not... I'm very undecided!
 --- !u!1 &2147045042
 GameObject:
   m_ObjectHideFlags: 0

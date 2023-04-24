@@ -9891,6 +9891,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTalking: 0
+  player: {fileID: 0}
+  player2: {fileID: 0}
+  player3: {fileID: 0}
+  player4: {fileID: 0}
   dialoguePanel: {fileID: 1037770768}
   dialogueMark: {fileID: 1805377517}
   dialogueText: {fileID: 1826921825}
@@ -10566,7 +10570,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404366425}
-  m_LocalRotation: {x: 0.27681655, y: -0.000000016534, z: 0.00000000476301, w: 0.96092284}
+  m_LocalRotation: {x: 0.27681655, y: 0.000000016534, z: -0.00000000476301, w: 0.96092284}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15302,7 +15306,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969311933}
-  m_LocalRotation: {x: 0.25929204, y: -0.000000016617905, z: 0.0000000044614774, w: 0.965799}
+  m_LocalRotation: {x: 0.25929204, y: 0.000000016617905, z: -0.0000000044614774, w: 0.965799}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

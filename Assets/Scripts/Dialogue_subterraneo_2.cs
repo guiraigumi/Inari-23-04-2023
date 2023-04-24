@@ -91,24 +91,7 @@ public class Dialogue_subterraneo_2 : MonoBehaviour
 
         }
 
-        if (lineIndex >= dialogueLines.Length)
-        {
-            conversationEnded = true;
-            bgmManager.StopBGM();
-            objectToActivate.SetActive(true);
-            Invoke("AfterCinematic", 11.0f);
-        }
     }
-
-    void AfterCinematic()
-    {
-        Debug.Log("AFTER WAITING");
-        if (conversationEnded)
-        {
-            SceneManager.LoadScene("Scene_17_1");
-        }
-    }
-
 
     private void StartDialogue()
     {
@@ -149,18 +132,25 @@ public class Dialogue_subterraneo_2 : MonoBehaviour
             anim.SetBool("isTalking", false);
             anim2.SetBool("isTalking", false);
             anim3.SetBool("isTalking", false);
-            npc = GameObject.Find("Bibliotecaria");
-
-            npc.transform.SetPositionAndRotation(new Vector3(npc.transform.position.x, npc.transform.position.y, npc.transform.position.z), originalYRotation);
             player.isplayerTalking = false;
             //Time.timeScale = 1f;
         }
 
         if (lineIndex >= dialogueLines.Length)
         {
-            Debug.Log("Conversation ended!");
+            bgmManager.StopBGM();
+            conversationEnded = true;
             objectToActivate.SetActive(true);
-            Invoke("AfterCinematic", 6.0f);
+            Invoke("AfterCinematic", 12.0f);
+        }
+    }
+
+    void AfterCinematic()
+    {
+        Debug.Log("AFTER WAITING");
+        if (conversationEnded)
+        {
+            SceneManager.LoadScene("Scene_16 2");
         }
     }
 
