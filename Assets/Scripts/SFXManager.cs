@@ -20,6 +20,7 @@ public class SFXManager : MonoBehaviour
     public AudioClip jumpSFX;
     public AudioClip fireSFX;
     public AudioClip fallingSFX;
+    public AudioClip rewardSFX;
 
 
     //variable del audio source
@@ -103,6 +104,11 @@ public class SFXManager : MonoBehaviour
     public void FallingSound()
     {
         _audioSource.PlayOneShot(fallingSFX);
+    }
+
+    public void RewardSound()
+    {
+        _audioSource.PlayOneShot(rewardSFX);
     }
 }
 

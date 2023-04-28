@@ -3727,7 +3727,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32767
+    m_Bits: 294911
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4854,7 +4854,7 @@ MonoBehaviour:
   Carpet: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 0}
-  Dirt: {fileID: 0}
+  Dirt: {fileID: 8300000, guid: 36553f0cc4c35f341bd5ae061c663cf1, type: 3}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -4869,7 +4869,7 @@ MonoBehaviour:
     m_Bits: 0
   dirtLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 262144
   checkPoint: {fileID: 1159570017}
 --- !u!95 &877388441
 Animator:
@@ -19023,7 +19023,7 @@ MonoBehaviour:
   Carpet: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 0}
-  Dirt: {fileID: 0}
+  Dirt: {fileID: 8300000, guid: 36553f0cc4c35f341bd5ae061c663cf1, type: 3}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -19038,7 +19038,7 @@ MonoBehaviour:
     m_Bits: 131072
   dirtLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 262144
   checkPoint: {fileID: 1465513199}
 --- !u!95 &1837809507
 Animator:
@@ -20037,6 +20037,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 375a7d17d369bdc4b850f2233db25177, type: 3}
+--- !u!1 &2064728739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b72f95d8146834341a6dcec505b66fb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 318732239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2064728743
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064728739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: b72f95d8146834341a6dcec505b66fb3, type: 3}
 --- !u!1 &2086129670
 GameObject:
   m_ObjectHideFlags: 0
@@ -20723,7 +20743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2922634092934587923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.035, z: 0.042}
+  m_LocalPosition: {x: -0.02, y: 0.108, z: 0.042}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21682,7 +21702,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: -0.61
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -21815,7 +21835,7 @@ MonoBehaviour:
   Carpet: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 0}
-  Dirt: {fileID: 0}
+  Dirt: {fileID: 8300000, guid: 36553f0cc4c35f341bd5ae061c663cf1, type: 3}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -21830,7 +21850,7 @@ MonoBehaviour:
     m_Bits: 0
   dirtLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 262144
   checkPoint: {fileID: 2922634092934587948}
 --- !u!1 &2922634094205678377
 GameObject:
@@ -22303,7 +22323,7 @@ GameObject:
   - component: {fileID: 3896516960765684918}
   - component: {fileID: 4833831811574755433}
   - component: {fileID: 8617946249421001923}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

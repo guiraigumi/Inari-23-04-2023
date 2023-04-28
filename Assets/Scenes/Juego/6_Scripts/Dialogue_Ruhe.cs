@@ -11,6 +11,7 @@ public class Dialogue_Ruhe : MonoBehaviour
     private bool didDialogueStart;
     public bool isTalking;
     private int lineIndex;
+    private AudioSource _audioSource;
     GameObject npc;
 
     Animator anim;
@@ -24,6 +25,7 @@ public class Dialogue_Ruhe : MonoBehaviour
     [SerializeField] private GameObject backgroundImage;
     [SerializeField] private GameObject RawImage;
     private SFXManager sfxManager;
+    private BGMManager bgmManager;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
 
     [SerializeField] private GameObject npc1; // Assign in inspector
@@ -35,11 +37,14 @@ public class Dialogue_Ruhe : MonoBehaviour
         anim2 = npc2.GetComponent<Animator>();
         player = GameObject.Find("Player").GetComponent<Player>();
         sfxManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
+        bgmManager = GameObject.Find("BGMManager").GetComponent<BGMManager>();
+
     }
 
     void Start()
     {
         StartDialogue();
+        bgmManager.StartBGM();
     }
 
     void Update()

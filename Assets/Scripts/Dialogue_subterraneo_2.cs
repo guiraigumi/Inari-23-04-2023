@@ -71,26 +71,6 @@ public class Dialogue_subterraneo_2 : MonoBehaviour
             }
         }
 
-
-        if (Input.GetKeyDown(KeyCode.JoystickButton1))
-        {
-            if (!didDialogueStart)
-            {
-                StartDialogue();
-            }
-            else if (dialogueText.text == dialogueLines[lineIndex])
-            {
-                NextDialogueLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-
-                dialogueText.text = dialogueLines[lineIndex];
-            }
-
-        }
-
     }
 
     private void StartDialogue()

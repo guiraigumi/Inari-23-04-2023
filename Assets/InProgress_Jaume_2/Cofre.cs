@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cofre : MonoBehaviour
 {
+    public static Player Instance;
     private Animator anim;
     private AudioSource audio;
     [SerializeField] private GameObject chestIcon;
@@ -12,20 +13,35 @@ public class Cofre : MonoBehaviour
     [SerializeField] private GameObject chestIcon4;
     [SerializeField] private AudioClip openChest;
     [SerializeField] private AudioClip chestAlert;
-    /*[SerializeField] private AvrosManager avrosManager;
-    [SerializeField] private int minAvros = 5;
-    [SerializeField] private int maxAvros = 10;*/
+    private SFXManager sfxManager;
+
+    public GameObject card;
+    public GameObject canvasController;
+    public GameObject cardObtainedalbum;
+
+    // Agrega una variable para almacenar el ID de la carta correspondiente al cofre
+    public int cardID;
 
     private bool isOpened = false;
 
-    // Start is called before the first frame update
+    // Referencia al Card Manager
+    private CardManager cardManager;
+
+    private void Awake()
+    {
+        sfxManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
+    }
     void Start()
     {
+        Instance = GetComponent<Player>();
         anim = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
+        
+
+        // Busca el Card Manager en la escena
+        cardManager = FindObjectOfType<CardManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -39,24 +55,25 @@ public class Cofre : MonoBehaviour
             audio.PlayOneShot(chestAlert);
         }
 
-         if (!isOpened && collider.gameObject.CompareTag("Ruhe"))
+        if (!isOpened && collider.gameObject.CompareTag("Ruhe"))
         {
             chestIcon2.SetActive(true);
             audio.PlayOneShot(chestAlert);
         }
 
-         if (!isOpened && collider.gameObject.CompareTag("Hangin"))
+        if (!isOpened && collider.gameObject.CompareTag("Hangin"))
         {
             chestIcon3.SetActive(true);
             audio.PlayOneShot(chestAlert);
         }
 
-         if (!isOpened && collider.gameObject.CompareTag("Kalju"))
+        if (!isOpened && collider.gameObject.CompareTag("Kalju"))
         {
             chestIcon4.SetActive(true);
             audio.PlayOneShot(chestAlert);
         }
     }
+
 
     void OnTriggerStay(Collider collider)
     {
@@ -64,42 +81,70 @@ public class Cofre : MonoBehaviour
         {
             anim.SetBool("isOpen", true);
             chestIcon.SetActive(false);
-            /*int avrosAmount = Random.Range(minAvros, maxAvros + 1);
-            avrosManager.AddAvrosFromChest(avrosAmount);*/
             isOpened = true;
+            card.SetActive(true);
+            canvasController.SetActive(true);
+            cardObtainedalbum.SetActive(true);
             audio.PlayOneShot(openChest);
+            sfxManager.RewardSound();
+            GetComponent<Player>().enabled = false;
+
+            // Llama a la función ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abrió
+            cardManager.ActivateCard(cardID);
         }
 
         if (!isOpened && collider.gameObject.CompareTag("Ruhe") && Input.GetButtonDown("Submit"))
         {
             anim.SetBool("isOpen", true);
             chestIcon2.SetActive(false);
-            /*int avrosAmount = Random.Range(minAvros, maxAvros + 1);
-            avrosManager.AddAvrosFromChest(avrosAmount);*/
             isOpened = true;
+            card.SetActive(true);
+            canvasController.SetActive(true);
+            cardObtainedalbum.SetActive(true);
             audio.PlayOneShot(openChest);
+            GetComponent<Player>().enabled = false;
+
+            // Llama a la función ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abrió
+            cardManager.ActivateCard(cardID);
         }
 
         if (!isOpened && collider.gameObject.CompareTag("Hangin") && Input.GetButtonDown("Submit"))
         {
             anim.SetBool("isOpen", true);
             chestIcon3.SetActive(false);
-            /*int avrosAmount = Random.Range(minAvros, maxAvros + 1);
-            avrosManager.AddAvrosFromChest(avrosAmount);*/
             isOpened = true;
+            card.SetActive(true);
+            canvasController.SetActive(true);
+            cardObtainedalbum.SetActive(true);
             audio.PlayOneShot(openChest);
+            GetComponent<Player>().enabled = false;
+
+            // Llama a la función ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abrió
+            cardManager.ActivateCard(cardID);
         }
 
         if (!isOpened && collider.gameObject.CompareTag("Kalju") && Input.GetButtonDown("Submit"))
         {
             anim.SetBool("isOpen", true);
             chestIcon4.SetActive(false);
-            /*int avrosAmount = Random.Range(minAvros, maxAvros + 1);
-            avrosManager.AddAvrosFromChest(avrosAmount);*/
             isOpened = true;
+            card.SetActive(true);
+            canvasController.SetActive(true);
+            cardObtainedalbum.SetActive(true);
             audio.PlayOneShot(openChest);
+            GetComponent<Player>().enabled = false;
+
+            // Llama a la función ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abrió
+            cardManager.ActivateCard(cardID);
+        }
+
+        if (isOpened && Input.GetButtonDown("Cancel"))
+        {
+            GetComponent<Player>().enabled = true;
         }
     }
+
+    
 
     void OnTriggerExit(Collider collider)
     {

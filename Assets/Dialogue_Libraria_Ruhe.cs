@@ -13,6 +13,7 @@ public class Dialogue_Libraria_Ruhe : MonoBehaviour
     private int lineIndex;
     GameObject target;
     GameObject npc;
+    public GameObject reward;
     private Quaternion originalYRotation;
 
 
@@ -117,7 +118,7 @@ public class Dialogue_Libraria_Ruhe : MonoBehaviour
 
         if (lineIndex >= dialogueLines.Length)
         {
-
+            reward.SetActive(true);
         }
     }
 

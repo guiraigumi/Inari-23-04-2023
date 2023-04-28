@@ -27657,7 +27657,7 @@ MonoBehaviour:
   Carpet: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 0}
-  Dirt: {fileID: 0}
+  Dirt: {fileID: 8300000, guid: 36553f0cc4c35f341bd5ae061c663cf1, type: 3}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -27672,7 +27672,7 @@ MonoBehaviour:
     m_Bits: 131072
   dirtLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 262144
   checkPoint: {fileID: 254650845}
 --- !u!95 &1526489658
 Animator:
@@ -34178,7 +34178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2922634092934587923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.159, z: 0.042}
+  m_LocalPosition: {x: -0.02, y: 0.114, z: 0.042}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
