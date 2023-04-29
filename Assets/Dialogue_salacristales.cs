@@ -79,7 +79,7 @@ public class Dialogue_salacristales : MonoBehaviour
             conversationEnded = true;
             bgmManager.StopBGM();
             objectToActivate.SetActive(true);
-            Invoke("AfterCinematic", 11.0f);
+            Invoke("AfterCinematic", 20.0f);
         }
     }
 
@@ -88,7 +88,7 @@ public class Dialogue_salacristales : MonoBehaviour
         Debug.Log("AFTER WAITING");
         if (conversationEnded)
         {
-            SceneManager.LoadScene("Scene_17_1");
+            SceneManager.LoadScene("Scene_20");
         }
     }
 

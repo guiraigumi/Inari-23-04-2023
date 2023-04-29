@@ -73,7 +73,6 @@ public class Dialogue_cristales3 : MonoBehaviour
             conversationEnded = true;
             bgmManager.StopBGM();
             objectToActivate.SetActive(true);
-            Invoke("AfterCinematic", 7.0f);
         }
     }
 
@@ -95,6 +94,7 @@ public class Dialogue_cristales3 : MonoBehaviour
         Vector3 targetPosition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
 
         npc.transform.LookAt(targetPosition);
+        player.isplayerTalking = true;
         player.isplayerTalking = true;
     }
 
@@ -127,7 +127,6 @@ public class Dialogue_cristales3 : MonoBehaviour
         {
             Debug.Log("Conversation ended!");
             objectToActivate.SetActive(true);
-            //Invoke("AfterCinematic", 6.0f);
         }
     }
 

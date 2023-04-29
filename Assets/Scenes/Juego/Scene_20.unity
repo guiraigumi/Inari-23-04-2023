@@ -274,7 +274,6 @@ MonoBehaviour:
   m_Script: {fileID: 664108867}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &86711807
 Transform:
   m_ObjectHideFlags: 19
@@ -738,6 +737,71 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6938710573835471721, guid: 50f844eb7d5dbfe4498440b1e95e2373, type: 3}
+--- !u!1 &297784217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297784218}
+  - component: {fileID: 297784219}
+  m_Layer: 0
+  m_Name: Scene_Manager2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &297784218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297784217}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.732588, y: 2.020945, z: 116.42304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 528032493}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &297784219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297784217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60848cb5ffea334459c975e7eb46cb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  objectToActivate: {fileID: 386414636}
+  player: {fileID: 1972970585}
+  dialoguePanel: {fileID: 1037770768}
+  dialogueMark: {fileID: 0}
+  dialogueText: {fileID: 1826921825}
+  backgroundImage: {fileID: 386058526}
+  RawImage: {fileID: 1638038304}
+  librariaTalking: {fileID: 1753665668}
+  dialogueLines:
+  - 'Zemsta: Stop, Glava. This doesn''t make sense anymore.'
+  - 'Renhet: Why stop now, Zemsta? We are about to achieve our goal.'
+  - 'Zemsta: We are not killers, Renhet. We came for a clear objective. Haven''t
+    you noticed yet?'
+  - 'Renhet: The crystals... have stopped emitting power.'
+  - 'Zemsta: The power of the dark crystal has drained some of the energy from the
+    crystals.'
+  - 'Renhet: And therefore the energy from these kids.'
+  - 'Zemsta: They are not a threat. We can destroy the crystals without interruption.'
+  npc1: {fileID: 952102073}
+  npc2: {fileID: 1981980544}
 --- !u!1 &310480952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,6 +1309,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386058526}
   m_CullTransparentMesh: 1
+--- !u!1 &386414636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 386414637}
+  - component: {fileID: 386414638}
+  m_Layer: 0
+  m_Name: Scene_Manager3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &386414637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386414636}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.732588, y: 2.020945, z: 116.42304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 528032493}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &386414638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386414636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a07c8a93c35ce84a957219d9f637b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  objectToActivate: {fileID: 1609383786}
+  objectTodeactivate1: {fileID: 660128704}
+  objectTodeactivate2: {fileID: 297784217}
+  player: {fileID: 1972970585}
+  dialoguePanel: {fileID: 1037770768}
+  dialogueText: {fileID: 1826921825}
+  backgroundImage: {fileID: 386058526}
+  RawImage: {fileID: 319514145}
+  librariaTalking: {fileID: 2016372264}
+  dialogueLines:
+  - 'Kalju: That''s why we feel so weak...'
+  - 'Hangin: If we lose the crystals... will we lose our connections to the elements?'
+  - 'Ruhe: That''s the objective they''re pursuing since the beginning...'
+  - 'Lua: The crystals... they''re terrified. I can feel it...'
+  npc1: {fileID: 1924867157}
+  npc2: {fileID: 650748110}
+  npc3: {fileID: 1008084039}
+  npc4: {fileID: 1579445993}
 --- !u!1 &469164263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,9 +1836,9 @@ Transform:
   m_Children:
   - {fileID: 371697215}
   - {fileID: 1106058876}
-  - {fileID: 1364306589}
-  - {fileID: 1720469864}
-  - {fileID: 1885302580}
+  - {fileID: 660128705}
+  - {fileID: 297784218}
+  - {fileID: 386414637}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1963,6 +2090,105 @@ Transform:
   m_Father: {fileID: 1972970587}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &617158206
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2608247
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2608247
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2608247
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.97
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.35
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 89.26
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9527751
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.30367702
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -35.357
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5913090471644287385, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8240267c5172edb47a5a3dac0fc6e083, type: 2}
+    - target: {fileID: 919132149155446097, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_Name
+      value: Lua_hurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467707443874080025, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8240267c5172edb47a5a3dac0fc6e083, type: 2}
+    - target: {fileID: 8072813732081468531, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8240267c5172edb47a5a3dac0fc6e083, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e43d9b22315bbc4eba5e20b4eabd163, type: 3}
 --- !u!1 &620492014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2714,6 +2940,68 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &660128704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660128705}
+  - component: {fileID: 660128706}
+  m_Layer: 0
+  m_Name: Scene_Manager1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &660128705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660128704}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.732588, y: 2.020945, z: 116.42304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 528032493}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &660128706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660128704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0624cc1f5dab6748a3556c4bfdf8787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTalking: 0
+  objectToActivate: {fileID: 297784217}
+  player: {fileID: 1972970585}
+  dialoguePanel: {fileID: 1037770768}
+  dialogueText: {fileID: 1826921825}
+  backgroundImage: {fileID: 386058526}
+  RawImage: {fileID: 319514145}
+  librariaTalking: {fileID: 2016372264}
+  dialogueLines:
+  - 'Kalju: We don''t do enough damage...'
+  - 'Hangin: His blows are... terrible'
+  - 'Ruhe: I feel very weak... I don''t know how to explain it but it''s as if my
+    energy is being drained...'
+  - 'Lua: We can''t give up guys... otherwise the region will be lost.'
+  npc1: {fileID: 1924867157}
+  npc2: {fileID: 650748110}
+  npc3: {fileID: 1008084039}
+  npc4: {fileID: 1579445993}
 --- !u!115 &664108867
 MonoScript:
   m_ObjectHideFlags: 0
@@ -2813,7 +3101,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c74d9b04c846364abdc68ccfa390102,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.499
+      value: -7.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c74d9b04c846364abdc68ccfa390102,
         type: 3}
@@ -6720,6 +7008,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1011310055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e43d9b22315bbc4eba5e20b4eabd163,
+    type: 3}
+  m_PrefabInstance: {fileID: 617158206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1011310056
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011310055}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c9c95be598de71144a75dea45e7a3744, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1021775600
 GameObject:
   m_ObjectHideFlags: 19
@@ -6749,7 +7063,6 @@ MonoBehaviour:
   m_Script: {fileID: 1693383141}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &1021775602
 Transform:
   m_ObjectHideFlags: 19
@@ -7061,6 +7374,7 @@ MonoBehaviour:
   jumpSFX: {fileID: 8300000, guid: 5d483c34ae7f83b44ae3a0b85d5db997, type: 3}
   fireSFX: {fileID: 8300000, guid: 008357afeb7cb824684555832a67f412, type: 3}
   fallingSFX: {fileID: 0}
+  rewardSFX: {fileID: 0}
 --- !u!82 &1106058878
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7792,67 +8106,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1364306588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1364306589}
-  - component: {fileID: 1364306590}
-  m_Layer: 0
-  m_Name: SceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1364306589
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364306588}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.77245, y: -1.4191155, z: 96.110214}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 528032493}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1364306590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364306588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0624cc1f5dab6748a3556c4bfdf8787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTalking: 0
-  objectToActivate: {fileID: 1720469863}
-  player: {fileID: 1972970585}
-  dialoguePanel: {fileID: 1037770768}
-  dialogueText: {fileID: 1826921825}
-  backgroundImage: {fileID: 386058526}
-  RawImage: {fileID: 319514145}
-  librariaTalking: {fileID: 2016372264}
-  dialogueLines:
-  - 'Kalju: We couldn''t hurt him...'
-  - 'Ruhe: I feel... very weak.'
-  - 'Hangin: I thought I was the only one who felt this way... Ugh...'
-  - 'Lua: We can''t harm him... but we can''t give up either...'
-  npc1: {fileID: 1924867157}
-  npc2: {fileID: 1008084039}
-  npc3: {fileID: 650748110}
-  npc4: {fileID: 1579445993}
 --- !u!64 &1538003956
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8489,6 +8742,115 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588151040}
   m_CullTransparentMesh: 1
+--- !u!1 &1609383786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1609383787}
+  - component: {fileID: 1609383790}
+  - component: {fileID: 1609383789}
+  - component: {fileID: 1609383788}
+  m_Layer: 5
+  m_Name: Cinematica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1609383787
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609383786}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1913335491}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!328 &1609383788
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609383786}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 947b77285a46e394badb405368981738, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 739a095cf8e9dd248a4b3b8c42922e66, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &1609383789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609383786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: 739a095cf8e9dd248a4b3b8c42922e66, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1609383790
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609383786}
+  m_CullTransparentMesh: 1
 --- !u!1 &1638038304
 GameObject:
   m_ObjectHideFlags: 0
@@ -8674,70 +9036,6 @@ MonoScript:
   m_ExecutionOrder: 0
   m_ClassName: SceneObjectIDMapSceneAsset
   m_Namespace: UnityEngine.Rendering.HighDefinition
---- !u!1 &1720469863
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1720469864}
-  - component: {fileID: 1720469865}
-  m_Layer: 0
-  m_Name: SceneManager_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1720469864
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720469863}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.77245, y: -1.4191155, z: 96.110214}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 528032493}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1720469865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720469863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60848cb5ffea334459c975e7eb46cb6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTalking: 0
-  objectToActivate: {fileID: 1885302579}
-  player: {fileID: 1972970585}
-  dialoguePanel: {fileID: 1037770768}
-  dialogueMark: {fileID: 0}
-  dialogueText: {fileID: 1826921825}
-  backgroundImage: {fileID: 386058526}
-  RawImage: {fileID: 1638038304}
-  librariaTalking: {fileID: 1753665668}
-  dialogueLines:
-  - 'Zemsta: Stop, Glava. This doesn''t make sense anymore.'
-  - 'Renhet: Why stop now, Zemsta? We are about to achieve our goal.'
-  - 'Zemsta: We are not killers, Renhet. We came for a clear objective. Haven''t
-    you noticed yet?'
-  - 'Renhet: The crystals... have stopped emitting power.'
-  - 'Zemsta: The power of the dark crystal has drained some of the energy from the
-    crystals.'
-  - 'Renhet: And therefore the energy from these kids.'
-  npc1: {fileID: 952102073}
-  npc2: {fileID: 1981980544}
 --- !u!64 &1752269474
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9342,68 +9640,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7387706064836869012, guid: 50f844eb7d5dbfe4498440b1e95e2373, type: 3}
---- !u!1 &1885302579
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1885302580}
-  - component: {fileID: 1885302581}
-  m_Layer: 0
-  m_Name: SceneManager_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1885302580
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885302579}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.77245, y: -1.4191155, z: 96.110214}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 528032493}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1885302581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885302579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0624cc1f5dab6748a3556c4bfdf8787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTalking: 0
-  objectToActivate: {fileID: 0}
-  player: {fileID: 1972970585}
-  dialoguePanel: {fileID: 1037770768}
-  dialogueText: {fileID: 1826921825}
-  backgroundImage: {fileID: 386058526}
-  RawImage: {fileID: 319514145}
-  librariaTalking: {fileID: 2016372264}
-  dialogueLines:
-  - 'Kalju: That''s why we feel so weak...'
-  - 'Hangin: If we lose the crystals... will we lose our connections to the elements?'
-  - 'Ruhe: That''s the objective they''re pursuing. Right now, they could easily
-    defeat us.'
-  - 'Lua: The crystals... they''re afraid. I can feel it...'
-  npc1: {fileID: 1924867157}
-  npc2: {fileID: 650748110}
-  npc3: {fileID: 1008084039}
-  npc4: {fileID: 1579445993}
 --- !u!1 &1913335487
 GameObject:
   m_ObjectHideFlags: 0
@@ -9506,6 +9742,7 @@ RectTransform:
   - {fileID: 1579445994}
   - {fileID: 952102072}
   - {fileID: 1981980543}
+  - {fileID: 1609383787}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12308,7 +12545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6749450527277943841}
   m_LocalRotation: {x: 0.00000004456875, y: 2.876791e-25, z: 7.438228e-25, w: 1}
-  m_LocalPosition: {x: 5.9557004e-23, y: -0.00000059604645, z: -0.00000017881393}
+  m_LocalPosition: {x: -0.17, y: -0.00000059604645, z: -15.25}
   m_LocalScale: {x: 0.11843782, y: 0.21214129, z: 0.20437051}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13038,7 +13275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351594458872384814}
   m_LocalRotation: {x: -0, y: -0.99998605, z: -0, w: -0.0052812253}
-  m_LocalPosition: {x: 10.03, y: 3.838, z: 92.04}
+  m_LocalPosition: {x: 10.03, y: 3.838, z: 93.89}
   m_LocalScale: {x: 0.51387, y: 0.51387, z: 0.51387}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -134,10 +134,12 @@ public class Dialogue_salacristales2 : MonoBehaviour
         {
             Debug.Log("Conversation ended!");
             objectToActivate.SetActive(true);
-            //Invoke("AfterCinematic", 6.0f);
+            //Invoke("AfterCinematic", 13.0f);
         }
-    }
 
+
+
+    }
 
     private IEnumerator ShowLine()
     {
