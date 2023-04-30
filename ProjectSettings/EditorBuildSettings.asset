@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Juego/Scene_3.unity
-    guid: 41d87f100be57674a80063ad1469e821
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Juego/Scene_4.unity
     guid: 311f33e273d17d34394e4dbd64a73900
@@ -116,6 +116,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Juego/Scene_21.unity
     guid: bb594fb1a94bc1645a464dad5530aa83
+  - enabled: 1
+    path: Assets/Scenes/Juego/Scene_3.unity
+    guid: 5942c405f5b3f5944b1d0ed08d135661
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}

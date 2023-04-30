@@ -15,6 +15,7 @@ public class BattleManager : MonoBehaviour
     public GameObject playerCam;
     public GameObject enemyCam;
     public GameObject victoryCam;
+    public string escenaVictoria;
 
 
     public trackswitcher playerSwitch;
@@ -35,6 +36,7 @@ public class BattleManager : MonoBehaviour
     public GameObject abilityPanel;
     //Boton limite
     public GameObject limitButton;
+    public Animator luaAnimator;
 
     private SFXManager sfxManager;
     private BGMManager bgmManager;
@@ -51,6 +53,7 @@ public class BattleManager : MonoBehaviour
         bgmManager = GameObject.Find("BGMManager").GetComponent<BGMManager>();
 
         cursorAnimator = GetComponent<Animator>();
+        luaAnimator = GetComponent<Animator>();
         Instance = this;
     }
 
@@ -363,6 +366,7 @@ public class BattleManager : MonoBehaviour
             playerCam.gameObject.SetActive(false);
             enemyCam.gameObject.SetActive(false);
             victoryCam.gameObject.SetActive(true);
+            luaAnimator.Play("Victory");
             Debug.Log("Match Won!");
             Invoke("LoadSceneWin", 5.0f);
         }
@@ -380,7 +384,7 @@ public class BattleManager : MonoBehaviour
     void LoadSceneWin()
     {
         Debug.Log("AFTER WAITING");
-        SceneManager.LoadScene("Scene_4");
+        SceneManager.LoadScene(escenaVictoria);
     }
 
     void LoadSceneLose()

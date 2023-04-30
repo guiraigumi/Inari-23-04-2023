@@ -19,6 +19,7 @@ public class AbilityUI : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         var charData = BattleManager.Instance.currentCharacter;
+        
 
         UIManager.Instance.DeselectOtherAbilityUIs(this);
 
