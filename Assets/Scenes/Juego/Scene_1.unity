@@ -2562,7 +2562,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304096035}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 785baf9a1711f034186809428e596b29, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 71ad1d07cfb35cf4992a36578861080e, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -3940,7 +3940,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 1
+    m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -4682,6 +4682,7 @@ MonoBehaviour:
   jumpSFX: {fileID: 0}
   fireSFX: {fileID: 0}
   fallingSFX: {fileID: 0}
+  rewardSFX: {fileID: 0}
 --- !u!82 &1106058878
 AudioSource:
   m_ObjectHideFlags: 0
