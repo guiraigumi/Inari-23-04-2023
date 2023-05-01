@@ -2993,10 +2993,11 @@ MonoBehaviour:
   RawImage: {fileID: 319514145}
   librariaTalking: {fileID: 2016372264}
   dialogueLines:
-  - 'Kalju: We don''t do enough damage...'
-  - 'Hangin: His blows are... terrible'
-  - 'Ruhe: I feel very weak... I don''t know how to explain it but it''s as if my
-    energy is being drained...'
+  - 'Kalju: We''ve hit it with everything we''ve got... and yet it doesn''t even
+    flinch...'
+  - 'Hangin: I don''t understand... but I''m running out of energy...'
+  - 'Ruhe: I feel very weak too... I don''t know how to explain it but it''s as if
+    my energy is being drained...'
   - 'Lua: We can''t give up guys... otherwise the region will be lost.'
   npc1: {fileID: 1924867157}
   npc2: {fileID: 650748110}

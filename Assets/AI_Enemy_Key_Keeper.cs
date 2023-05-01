@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class AI_Enemy_Key_Keeper : MonoBehaviour
 {
+    public GameObject cameraMuv;
     public enum State
     {
         Patrolling,
@@ -46,6 +47,7 @@ public class AI_Enemy_Key_Keeper : MonoBehaviour
     void Start()
     {
         StartCoroutine(DelayPatrol());
+        cameraMuv.SetActive(true);
 
         Invoke("DisableEnemyParticle", 4f);
     }
@@ -150,7 +152,7 @@ public class AI_Enemy_Key_Keeper : MonoBehaviour
         {
             Debug.Log("Estoy atacando");
 
-            SceneManager.LoadScene(22);
+            SceneManager.LoadScene(32);
 
             currentState = State.Attacking;
         }
@@ -159,7 +161,7 @@ public class AI_Enemy_Key_Keeper : MonoBehaviour
         {
             Debug.Log("Estoy atacando");
 
-            SceneManager.LoadScene(22);
+            SceneManager.LoadScene(32);
 
             currentState = State.Attacking;
         }
@@ -168,7 +170,7 @@ public class AI_Enemy_Key_Keeper : MonoBehaviour
         {
             Debug.Log("Estoy atacando");
 
-            SceneManager.LoadScene(22);
+            SceneManager.LoadScene(32);
 
             currentState = State.Attacking;
         }
@@ -177,7 +179,7 @@ public class AI_Enemy_Key_Keeper : MonoBehaviour
         {
             Debug.Log("Estoy atacando");
 
-            SceneManager.LoadScene(22);
+            SceneManager.LoadScene(32);
 
             currentState = State.Attacking;
         }
@@ -225,6 +227,7 @@ public class AI_Enemy_Key_Keeper : MonoBehaviour
     void DisableEnemyParticle()
     {
         enemyParticle.SetActive(false);
+        cameraMuv.SetActive(false);
     }
 
     IEnumerator DelayPatrol()
