@@ -70,6 +70,7 @@ void RadialMenuUpdate()
     if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1) || Input.GetAxisRaw("Left/Right") > 0 )
     {
         SwitchCharacter(lua);
+        lua.transform.Find("Fire_Lua").gameObject.SetActive(false);
     }
     else if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetAxisRaw("Up/Down") > 0)
     {

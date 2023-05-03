@@ -30201,6 +30201,7 @@ MonoBehaviour:
   jumpSFX: {fileID: 0}
   fireSFX: {fileID: 0}
   fallingSFX: {fileID: 0}
+  rewardSFX: {fileID: 0}
 --- !u!1 &1873639926
 GameObject:
   m_ObjectHideFlags: 3

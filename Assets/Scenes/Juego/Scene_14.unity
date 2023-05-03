@@ -18592,6 +18592,7 @@ MonoBehaviour:
   jumpSFX: {fileID: 0}
   fireSFX: {fileID: 0}
   fallingSFX: {fileID: 8300000, guid: 36ec90da8dab38446b95047597271f6a, type: 3}
+  rewardSFX: {fileID: 0}
 --- !u!1001 &1320476708
 PrefabInstance:
   m_ObjectHideFlags: 0

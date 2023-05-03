@@ -17,7 +17,7 @@ public class VideoPlayerTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {            
             cinematicRuhe.SetActive(true);
-            //bgmManager.StopBGM();
+            bgmManager.StopBGM();
             Invoke("AfterCinematic", 12.0f);
         }
     }

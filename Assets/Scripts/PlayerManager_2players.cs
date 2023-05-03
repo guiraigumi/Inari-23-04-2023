@@ -101,7 +101,8 @@ public class PlayerManager_2players : MonoBehaviour
         nurse.GetComponent<Dialogue_enfermero_Ruhe>().enabled = false;
         professor.GetComponent<Dialogue_Profesor_Lua>().enabled = true;
         professor.GetComponent<Dialogue_profesor_Ruhe>().enabled = false;
-    }
+        lua.transform.Find("Fire_Lua").gameObject.SetActive(false);
+     }
     else if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2) || Input.GetAxisRaw("Up/Down") > 0)
     {
         SwitchCharacter(ruhe);

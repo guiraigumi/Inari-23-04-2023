@@ -1808,7 +1808,7 @@ MonoBehaviour:
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
-    Dutch: 0
+    Dutch: 2.4
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
@@ -5256,7 +5256,6 @@ MonoBehaviour:
   m_Script: {fileID: 1185220907}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &861924219
 Transform:
   m_ObjectHideFlags: 19
@@ -5586,7 +5585,6 @@ MonoBehaviour:
   m_Script: {fileID: 1693383141}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &1021775602
 Transform:
   m_ObjectHideFlags: 19
@@ -7290,7 +7288,7 @@ MonoBehaviour:
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
-    Dutch: 0
+    Dutch: 2.4
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
@@ -8078,7 +8076,7 @@ MonoBehaviour:
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
-    Dutch: 0
+    Dutch: 2.4
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
@@ -8886,7 +8884,7 @@ MonoBehaviour:
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
-    Dutch: 0
+    Dutch: 2.4
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2

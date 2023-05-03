@@ -88,7 +88,7 @@ public class Dialogue_Profesor1 : MonoBehaviour
         RawImage.SetActive(false);
         dialogueText.text = string.Empty;
 
-        yield return new WaitForSeconds(2f); // Wait for 2 seconds
+        yield return new WaitForSecondsRealtime(2f);
 
         lineIndex++;
         if (lineIndex < dialogueLines.Length)
