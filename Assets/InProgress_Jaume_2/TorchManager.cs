@@ -22,10 +22,14 @@ public class TorchManager : MonoBehaviour
 
     private Torch[] torches;
 
+    private AudioSource audio;
+    public AudioClip wrongSound;
+
     void Start()
     {
         Instance = this;
         torches = FindObjectsOfType<Torch>();
+        audio = GetComponent<AudioSource>();
     }
 
     public void CheckOrder(Torch torch)
@@ -61,6 +65,7 @@ public class TorchManager : MonoBehaviour
         }
         else
         {
+            audio.PlayOneShot(wrongSound);
             fire1.SetActive(false);
             fire2.SetActive(false);
             fire3.SetActive(false);

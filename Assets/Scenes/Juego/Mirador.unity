@@ -2904,7 +2904,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468938604}
-  m_LocalRotation: {x: 0.025677573, y: 0.022405535, z: -0.0005756542, w: 0.999419}
+  m_LocalRotation: {x: 0.02567757, y: 0.022405539, z: -0.0005756543, w: 0.999419}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4325,7 +4325,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 294911
+    m_Bits: 1867775
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5700,6 +5700,8 @@ MonoBehaviour:
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 0}
   Dirt: {fileID: 8300000, guid: 36553f0cc4c35f341bd5ae061c663cf1, type: 3}
+  Wood: {fileID: 8300000, guid: c9f417035af91da4798fc897cbbb3687, type: 3}
+  Grass: {fileID: 8300000, guid: 8dba3910bb7e7c942b965a1850ec68f3, type: 3}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -5715,6 +5717,12 @@ MonoBehaviour:
   dirtLayer:
     serializedVersion: 2
     m_Bits: 262144
+  woodLayer:
+    serializedVersion: 2
+    m_Bits: 524288
+  grassLayer:
+    serializedVersion: 2
+    m_Bits: 1048576
   checkPoint: {fileID: 1159570017}
 --- !u!95 &877388441
 Animator:
@@ -11093,7 +11101,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c6a0afd2b884e0b4dba81f158a22ff37, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.612
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -12943,7 +12951,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 49151
+    m_Bits: 1622015
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 67a0d9f75cb24c54ca087126c4cd3ff5, type: 2}
   m_TargetDisplay: 0
@@ -23182,7 +23190,7 @@ GameObject:
   - component: {fileID: 5860716497291812134}
   - component: {fileID: 1706051864529339575}
   - component: {fileID: 5860716497291812135}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24577,6 +24585,8 @@ MonoBehaviour:
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 0}
   Dirt: {fileID: 8300000, guid: 36553f0cc4c35f341bd5ae061c663cf1, type: 3}
+  Wood: {fileID: 8300000, guid: c9f417035af91da4798fc897cbbb3687, type: 3}
+  Grass: {fileID: 8300000, guid: 8dba3910bb7e7c942b965a1850ec68f3, type: 3}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -24592,6 +24602,12 @@ MonoBehaviour:
   dirtLayer:
     serializedVersion: 2
     m_Bits: 262144
+  woodLayer:
+    serializedVersion: 2
+    m_Bits: 524288
+  grassLayer:
+    serializedVersion: 2
+    m_Bits: 1048576
   checkPoint: {fileID: 2922634092934587948}
 --- !u!1 &2922634094205678377
 GameObject:
@@ -25064,7 +25080,7 @@ GameObject:
   - component: {fileID: 3896516960765684918}
   - component: {fileID: 4833831811574755433}
   - component: {fileID: 8617946249421001923}
-  m_Layer: 18
+  m_Layer: 20
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

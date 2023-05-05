@@ -36,9 +36,6 @@ public class Cofre : MonoBehaviour
         Instance = GetComponent<Player>();
         anim = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
-        
-
-        // Busca el Card Manager en la escena
         cardManager = FindObjectOfType<CardManager>();
     }
 
@@ -89,7 +86,7 @@ public class Cofre : MonoBehaviour
             sfxManager.RewardSound();
             GetComponent<Player>().enabled = false;
 
-            // Llama a la función ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abrió
+            // Llama a la funciï¿½n ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abriï¿½
             cardManager.ActivateCard(cardID);
         }
 
@@ -104,7 +101,7 @@ public class Cofre : MonoBehaviour
             audio.PlayOneShot(openChest);
             GetComponent<Player>().enabled = false;
 
-            // Llama a la función ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abrió
+            // Llama a la funciï¿½n ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abriï¿½
             cardManager.ActivateCard(cardID);
         }
 
@@ -119,7 +116,7 @@ public class Cofre : MonoBehaviour
             audio.PlayOneShot(openChest);
             GetComponent<Player>().enabled = false;
 
-            // Llama a la función ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abrió
+            // Llama a la funciï¿½n ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abriï¿½
             cardManager.ActivateCard(cardID);
         }
 
@@ -134,7 +131,7 @@ public class Cofre : MonoBehaviour
             audio.PlayOneShot(openChest);
             GetComponent<Player>().enabled = false;
 
-            // Llama a la función ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abrió
+            // Llama a la funciï¿½n ActivateCard del Card Manager y pasa el ID de la carta correspondiente al cofre que se abriï¿½
             cardManager.ActivateCard(cardID);
         }
 

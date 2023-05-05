@@ -10,6 +10,11 @@ public class CanvasControllerNext : MonoBehaviour
 
     private int enterCount = 0; // Counter for Enter key press
 
+    void Start()
+    {
+        Time.timeScale = 0f;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
@@ -58,6 +63,7 @@ public class CanvasControllerNext : MonoBehaviour
                 }
 
                 isActive = false; // Set flag to indicate that elements are no longer active
+                Time.timeScale = 1f;
             }
         }
 
@@ -107,6 +113,7 @@ public class CanvasControllerNext : MonoBehaviour
                 }
 
                 isActive = false; // Set flag to indicate that elements are no longer active
+                Time.timeScale = 1f;
             }
         }
     }

@@ -6,8 +6,8 @@ public class WalkSteps : MonoBehaviour
 {
 
     private AudioSource audio;
-    public AudioClip Ground, Carpet, Tatami, Ice, Dirt;
-    public LayerMask groundLayer, carpetLayer, tatamiLayer, iceLayer, dirtLayer;
+    public AudioClip Ground, Carpet, Tatami, Ice, Dirt, Wood, Grass;
+    public LayerMask groundLayer, carpetLayer, tatamiLayer, iceLayer, dirtLayer, woodLayer, grassLayer;
     public Transform checkPoint;
 
 
@@ -44,6 +44,18 @@ public class WalkSteps : MonoBehaviour
          if (Physics.Raycast(checkPoint.position, Vector3.down, 0.6f, dirtLayer))
         {
             audio.PlayOneShot(Dirt);
+            audio.volume = Random.Range(0.3f, 1f);
+        }
+
+        if (Physics.Raycast(checkPoint.position, Vector3.down, 0.6f, woodLayer))
+        {
+            audio.PlayOneShot(Wood);
+            audio.volume = Random.Range(0.3f, 1f);
+        }
+
+        if (Physics.Raycast(checkPoint.position, Vector3.down, 0.6f, grassLayer))
+        {
+            audio.PlayOneShot(Grass);
             audio.volume = Random.Range(0.3f, 1f);
         }
 

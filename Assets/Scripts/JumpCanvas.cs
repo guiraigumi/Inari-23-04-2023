@@ -13,6 +13,7 @@ public class JumpCanvas : MonoBehaviour
             foreach (GameObject obj in objectsToActivate)
             {
                 obj.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
     }
@@ -40,6 +41,7 @@ public class JumpCanvas : MonoBehaviour
             foreach (GameObject obj in objectsToActivate)
             {
                 obj.SetActive(false);
+                Time.timeScale = 1f;
             }
         }
     }
