@@ -2129,7 +2129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 833917856}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1335396926}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -2420,7 +2420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 299026470}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 880136491}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -2527,7 +2527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1267270956}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 942989429}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -4383,7 +4383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 491232963}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 166361668}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -7261,7 +7261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 127976417}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1649141239}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -9922,7 +9922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1872868835}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 2064732259}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -10011,8 +10011,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: When you see an exclamation icon, pressing the space key will allow you
-    to perform an automatic jump. In this alpha, this jump is only available with
-    Lua.
+    to perform an automatic jump. Only available with Hangin.
 --- !u!222 &337018501
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12365,7 +12364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1186550788}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 506505422}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -13390,7 +13389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 2123686330}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 275844662}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -13988,7 +13987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 2061349126}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 568939075}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -16397,7 +16396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1986086273}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1916911068}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -21760,7 +21759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 637406866}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1151612477}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -23539,7 +23538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1360903981}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 619703299}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -25093,7 +25092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1083960879}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1764023565}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -32622,6 +32621,8 @@ MonoBehaviour:
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 8300000, guid: c6f9430cc943d054186541c55805ab2b, type: 3}
   Dirt: {fileID: 0}
+  Wood: {fileID: 0}
+  Grass: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -32635,6 +32636,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 131072
   dirtLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  woodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  grassLayer:
     serializedVersion: 2
     m_Bits: 0
   checkPoint: {fileID: 1036608359}
@@ -35316,7 +35323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1321551930}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 47995762}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -37465,7 +37472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1326672906}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1598654991}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -37480,8 +37487,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9713125, y: 1.2232838, z: 3.2465782}
-  m_Center: {x: -2.241973, y: 3.3273163, z: -8.259344}
+  m_Size: {x: 2.2996426, y: 1.7101469, z: 3.4821224}
+  m_Center: {x: -1.6504164, y: 3.5707479, z: -8.377116}
 --- !u!1 &1122315002
 GameObject:
   m_ObjectHideFlags: 0
@@ -39072,7 +39079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1883051182}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 957261860}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -43078,7 +43085,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d31e9cb5f4ed93c40b995858678ea859, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50bbc95ca2ecd054b88d95734f9d0a2c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -43538,7 +43545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 869240151}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1014449686}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -45011,7 +45018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 509898873}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1435063346}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -46397,7 +46404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 809889941}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1608914539}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -46545,7 +46552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 123861120}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 985224891}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -46560,8 +46567,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9713125, y: 1.2232838, z: 1.9604568}
-  m_Center: {x: -2.241973, y: 3.3273163, z: -8.902405}
+  m_Size: {x: 1.7127476, y: 1.9445138, z: 4.158951}
+  m_Center: {x: -2.612691, y: 3.6879313, z: -7.803158}
 --- !u!1 &1408701320
 GameObject:
   m_ObjectHideFlags: 0
@@ -48893,7 +48900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 609881333}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 464764796}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -56475,7 +56482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 475424374}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 915355641}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -60062,7 +60069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 75633995}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1908291776}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -61257,7 +61264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 21e6f5e02404db144949723e6b66c4c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4f9e49e625bb754295193aa8d028d37, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -62189,7 +62196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1019510165}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 1872884035}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -68845,7 +68852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1637151376}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 10218101}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -69792,7 +69799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 215166821}
-  player: {fileID: 1972970584}
+  player: {fileID: 1201905538957758596}
   abilityIcon: {fileID: 69073425}
   jumpHeight: 2
   jumpDuration: 0.5
@@ -70223,6 +70230,8 @@ MonoBehaviour:
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 8300000, guid: c6f9430cc943d054186541c55805ab2b, type: 3}
   Dirt: {fileID: 0}
+  Wood: {fileID: 0}
+  Grass: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -70236,6 +70245,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 131072
   dirtLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  woodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  grassLayer:
     serializedVersion: 2
     m_Bits: 0
   checkPoint: {fileID: 1201905539431858457}
@@ -73869,6 +73884,8 @@ MonoBehaviour:
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 8300000, guid: c6f9430cc943d054186541c55805ab2b, type: 3}
   Dirt: {fileID: 0}
+  Wood: {fileID: 0}
+  Grass: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -73882,6 +73899,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 131072
   dirtLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  woodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  grassLayer:
     serializedVersion: 2
     m_Bits: 0
   checkPoint: {fileID: 2114817376471222241}
@@ -74466,6 +74489,8 @@ MonoBehaviour:
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 8300000, guid: c6f9430cc943d054186541c55805ab2b, type: 3}
   Dirt: {fileID: 0}
+  Wood: {fileID: 0}
+  Grass: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -74479,6 +74504,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 131072
   dirtLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  woodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  grassLayer:
     serializedVersion: 2
     m_Bits: 0
   checkPoint: {fileID: 2922634094359850715}

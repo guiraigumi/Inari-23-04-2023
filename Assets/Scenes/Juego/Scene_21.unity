@@ -4975,6 +4975,8 @@ MonoBehaviour:
   Tatami: {fileID: 8300000, guid: b2d30efdb78fbde49b29e68db3b097a7, type: 3}
   Ice: {fileID: 0}
   Dirt: {fileID: 0}
+  Wood: {fileID: 0}
+  Grass: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -4988,6 +4990,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   dirtLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  woodLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  grassLayer:
     serializedVersion: 2
     m_Bits: 0
   checkPoint: {fileID: 1036608359}
